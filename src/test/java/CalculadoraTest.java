@@ -1,3 +1,5 @@
+import org.example.stack.RPNStack;
+import org.example.stack.exceptions.PopOnEmptyException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -201,7 +203,7 @@ public class CalculadoraTest {
     }
 
     @Test
-    void randomPushesToStackIncreaseLength(){
+    void randomPushesAndPopsToStackIncreaseLength(){
         int amountOfPushes = new Random().nextInt(1, 30);
         int amountOfPops = new Random().nextInt(0,amountOfPushes);
         for (int i = 0; i < amountOfPushes; i++) {
